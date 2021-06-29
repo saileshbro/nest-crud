@@ -1,6 +1,4 @@
-import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
-
-const config: PostgresConnectionOptions = {
+module.exports = {
   type: 'postgres',
   host: process.env.POSTGRES_HOST,
   port: Number(process.env.POSTGRES_PORT),
@@ -14,4 +12,3 @@ const config: PostgresConnectionOptions = {
     migrationsDir: 'src/db/migrations',
   },
 };
-export default config;
