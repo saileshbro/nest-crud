@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import TaskDto from './interfaces/task.dto';
 import TaskRepository from './task.repository';
@@ -10,11 +18,20 @@ export class TaskController {
     private readonly taskRepository: TaskRepository,
   ) {}
   @Get('/')
-  getTasks(): Promise<TaskDto[]> {
-    return this.taskRepository.getTasks();
+  async getTasks(): Promise<{ tasks: TaskDto[] }> {
+    const tasks = await this.taskRepository.getTasks();
+    return { tasks };
   }
   @Post('/')
   addTask(@Body() task: TaskDto): Promise<TaskDto> {
     return this.taskRepository.addTask(task);
+  }
+  @Patch('/:id')
+  updateTask(@Param('id') id: number, @Body() task: TaskDto) {
+    return this.taskRepository.updateTask(id, task);
+  }
+  @Delete('/:id')
+  deleteTask(@Param('id') id: number) {
+    return this.taskRepository.deleteTask(id);
   }
 }
