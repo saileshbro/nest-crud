@@ -7,11 +7,13 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { InjectRepository } from '@nestjs/typeorm';
 import TaskDto from './interfaces/task.dto';
 import TaskRepository from './task.repository';
 
-@Controller('task')
+@Controller('tasks')
+@ApiTags('tasks')
 export class TaskController {
   constructor(
     @InjectRepository(TaskRepository)
