@@ -24,7 +24,7 @@
     "migration:run": "yarn build && yarn typeorm migration:run"
   },
   "dependencies": {
-    "@nestjs/common": "^7.6.18",
+    "@nestjs/common": "^8.0.7",
     "@nestjs/config": "^0.6.3",
     "@nestjs/core": "^7.6.18",
     "@nestjs/platform-express": "^7.6.18",
@@ -34,7 +34,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
-    "swagger-ui-express": "^4.1.6",
+    "swagger-ui-express": "^4.2.0",
     "typeorm": "^0.2.34"
   },
   "devDependencies": {
