@@ -24,7 +24,7 @@
     "migration:run": "yarn build && yarn typeorm migration:run"
   },
   "dependencies": {
-    "@nestjs/common": "^8.0.7",
+    "@nestjs/common": "^8.4.0",
     "@nestjs/config": "^0.6.3",
     "@nestjs/core": "^7.6.18",
     "@nestjs/platform-express": "^7.6.18",
