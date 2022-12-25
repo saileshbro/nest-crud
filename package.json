@@ -35,7 +35,7 @@
     "rimraf": "^3.0.2",
     "rxjs": "^7.5.7",
     "swagger-ui-express": "^4.6.0",
-    "typeorm": "^0.3.10"
+    "typeorm": "^0.3.11"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",
